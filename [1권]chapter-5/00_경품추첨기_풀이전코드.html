@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title></title>
+        <style>
+        </style>
+        <script type="text/javascript"  src="../libs/jquery-1.11.0.min.js"></script>
+        <script>
+            /*
+             미션02: 랜덤 경품 추첨기
+             이번 미션은 앞에서 풀었던 경품 추첨기를 업그레이드 한 내용입니다.
+             추첨 버튼을 클릭할 때마다 1에서 10까지의 숫자를 랜덤하게 뽑아(생성),
+             다음 요구사항에 맞게 출력되게 만들어주세요.
+
+             요구사항
+                 3번이면 당첨! 냉장고
+                 5번이면 당첨! 세탁기
+                 8번이면 당첨! TV
+                 이외의 번호면 꽝!
+
+            힌트: 1에서 10사이의 랜덤 수를 생성하는 방법
+                parseInt(Math.random()*10)+1
+
+            */
+
+          
+            //풀이 전 코드:
+            $(document).ready(function() {
+                // 버튼에 클릭 이벤트 리스너 등록
+                $("#start").click(function() {
+                    //0~1사이의 랜덤 숫자를 발생하는 기능으로서 여기에 10을 곱하면 0에서 9사이의 랜덤숫자를 구할 수있습니다.
+                    //이 값에 1을 더해 우리가 원하는 1에서 10사이의 랜덤 숫자를 만들어 냅니다.
+                    var num1=parseInt(Math.random()*10)+1;
+                    switch(num1){
+                        case 3:
+                        alert("당첨! 냉장고");
+                        break;
+                        case 5:
+                        alert("당첨! 세탁기");
+                        break;
+                        case 8:
+                        alert("당첨! TV");
+                        breka;
+                        default:
+                        alert("꽝입니다");
+                        break;
+                    }
+                })
+            })
+
+        </script>
+    </head>
+
+    <body>
+        <button id="start">
+            추첨
+        </button>
+
+    </body>
+
+</html>
